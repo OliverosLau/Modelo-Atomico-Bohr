@@ -21,13 +21,13 @@ donde:
 
 Para el átomo de hidrógeno, el Hamiltoniano consta de dos partes:
 1. **Energía cinética** del electrón:
-   $$
+   \[
    \hat{T} = - \frac{\hbar^2}{2m} \nabla^2
-   $$
+   \]
 2. **Energía potencial** debido a la interacción electrostática entre el electrón y el protón (potencial de Coulomb):
-   $$
+   \[
    V(r) = - \frac{e^2}{4 \pi \epsilon_0 r}
-   $$
+   \]
 
 Sustituyendo ambas en la ecuación de Schrödinger, obtenemos:
 
@@ -67,9 +67,9 @@ donde \( l \) es el número cuántico asociado al momento angular. Esta ecuació
 
 La solución de la ecuación radial nos da los **niveles de energía** permitidos para el electrón. Estos niveles están cuantizados y dados por:
 
-$$
+\[
 E_n = - \frac{13.6 \, \text{eV}}{n^2}
-$$
+\]
 
 donde:
 - \( n \) es el **número cuántico principal**, que puede tomar valores enteros \( n = 1, 2, 3, \dots \).
@@ -96,8 +96,8 @@ Además del número cuántico principal \( n \), existen otros números cuántic
 
 Cuando un electrón pasa de un nivel de energía a otro, emite o absorbe un **fotón** cuya energía corresponde a la diferencia entre los niveles:
 
-$$
+\[
 E_\text{fotón} = E_{n_2} - E_{n_1}
-$$
+\]
 
 Esto explica las **líneas espectrales** del hidrógeno observadas en experimentos, donde las frecuencias de la luz emitida o absorbida corresponden a las transiciones entre niveles de energía cuantizados.
