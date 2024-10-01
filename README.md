@@ -70,7 +70,7 @@ E_n = - \frac{13.6 \, \text{eV}}{n^2}
 $$
 
 donde:
-- $n$  es el **número cuántico principal**, que puede tomar valores enteros $n = 1, 2, 3,...$.
+- $n$  es el **número cuántico principal**, que puede tomar valores enteros.
 - $13.6 \, \text{eV}$ es la energía del estado fundamental (cuando $n = 1$).
 
 #### 3.1. Interpretación física
