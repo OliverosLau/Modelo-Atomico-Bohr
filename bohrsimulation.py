@@ -1,11 +1,16 @@
 # Written by Ruth Chabay, licensed under Creative Commons 4.0.
 # Versión modificada por Laura Oliveros & Laura Triana.
 
-# Es necesaria la instalación e importación de vpython, un módulo de gráficos 3D
+# Es necesaria la instalación e importación de vpython, un módulo de gráficos 3D, además de la importación del archivo de los cálculos
 from vpython import *
+from energia_niveles import *
 
 """Se define el número máximo de niveles para el modelo atómico de Bohr"""
-n_max = 10 
+
+n_max = int(input("¿Cuál es el valor de n_max (número cuántico máximo)? "))
+niveles = niveles_energia(n_max)
+print(niveles)
+
 """A continuación se definen diferentes parámetros que permitirán obtener el modelo del gráfico en una ventada
 según las características especificadas"""
 scene.title = "Bohr model of the atom"
@@ -80,6 +85,8 @@ clicked = False
 def getclick():
     """
     Detecta un clic en la ventana de la simulación y cambia la variable global `clicked` a True.
+    Esta función es un manejador de eventos que se activa cuando el usuario hace clic en la ventana
+    de la simulación
     """
     global clicked
     clicked = True
@@ -90,6 +97,10 @@ up = True
 tflash = -1 
 
 while True:
+    """
+    Es el bucle principal de la simulación, actualiza el estado según la interacción del usuario 
+    (clicks) y ajusta propiedades tales como la posición del electrón y el número cuántico.
+    """
     rate(400)
     
     if clicked:
@@ -114,6 +125,8 @@ while True:
     if tflash > 0 and clock() - tflash >= 0.5:
         scene.background = background
         tflash = -1
+
+    # Actualiza la posición del electrón según la órbita circular con el tiempo t
 
     electron.pos = r * vector(cos(omega * t), sin(omega * t), 0)
     t += dt
