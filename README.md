@@ -21,13 +21,11 @@ donde:
 
 Para el átomo de hidrógeno, el Hamiltoniano consta de dos partes:
 1. **Energía cinética** del electrón:
-   $$
-   \hat{T} = - \frac{\hbar^2}{2m} \nabla^2
-   $$
+   
+   $\hat{T} = - \frac{\hbar^2}{2m} \nabla^2$
 2. **Energía potencial** debido a la interacción electrostática entre el electrón y el protón (potencial de Coulomb):
-   $$
-   V(r) = - \frac{e^2}{4 \pi \epsilon_0 r}
-   $$
+   
+   $V(r) = - \frac{e^2}{4 \pi \epsilon_0 r}$
 
 Sustituyendo ambas en la ecuación de Schrödinger, obtenemos:
 
@@ -37,13 +35,13 @@ $$
 
 ### 2. Coordenadas esféricas y separación de variables
 
-Dado que el potencial solo depende de la distancia radial $ r $, es conveniente resolver la ecuación en **coordenadas esféricas** $(r, \theta, \phi)$. El operador Laplaciano en estas coordenadas es:
+Dado que el potencial solo depende de la distancia radial $r$, es conveniente resolver la ecuación en **coordenadas esféricas** $(r, \theta, \phi)$. El operador Laplaciano en estas coordenadas es:
 
 $$
 \nabla^2 = \frac{1}{r^2} \frac{\partial}{\partial r} \left( r^2 \frac{\partial}{\partial r} \right) + \frac{1}{r^2 \sin \theta} \frac{\partial}{\partial \theta} \left( \sin \theta \frac{\partial}{\partial \theta} \right) + \frac{1}{r^2 \sin^2 \theta} \frac{\partial^2}{\partial \phi^2}
 $$
 
-Para resolver la ecuación de Schrödinger en estas coordenadas, aplicamos el método de **separación de variables**, suponiendo que la función de onda puede escribirse como el producto de una función radial $ R(r)$ y una función angular $ Y(\theta, \phi) $:
+Para resolver la ecuación de Schrödinger en estas coordenadas, aplicamos el método de **separación de variables**, suponiendo que la función de onda puede escribirse como el producto de una función radial $R(r)$ y una función angular $Y(\theta, \phi)$:
 
 $$
 \psi(r, \theta, \phi) = R(r) Y(\theta, \phi)
@@ -51,7 +49,7 @@ $$
 
 #### 2.1. Parte angular
 
-La parte angular se resuelve usando los **armónicos esféricos** $ Y(\theta, \phi) $, que son funciones bien conocidas y dependen de los números cuánticos $ l $ (momento angular) y $ m_l $ (proyección del momento angular). La solución angular no afecta a la cuantización de la energía.
+La parte angular se resuelve usando los **armónicos esféricos** $Y(\theta, \phi)$, que son funciones bien conocidas y dependen de los números cuánticos $l$ (momento angular) y $m_l$ (proyección del momento angular). La solución angular no afecta a la cuantización de la energía.
 
 #### 2.2. Parte radial
 
@@ -61,7 +59,7 @@ $$
 \frac{d}{dr} \left( r^2 \frac{dR(r)}{dr} \right) - \frac{2mr^2}{\hbar^2} \left( \frac{e^2}{4\pi \epsilon_0 r} + E \right) R(r) + l(l+1) R(r) = 0
 $$
 
-donde $ l $ es el número cuántico asociado al momento angular. Esta ecuación se resuelve imponiendo que $ R(r) $ sea finita y normalizable, lo que lleva a la **cuantización de la energía**.
+donde $l$ es el número cuántico asociado al momento angular. Esta ecuación se resuelve imponiendo que $R(r)$ sea finita y normalizable, lo que lleva a la **cuantización de la energía**.
 
 ### 3. Cuantización de la energía
 
@@ -72,8 +70,8 @@ E_n = - \frac{13.6 \, \text{eV}}{n^2}
 $$
 
 donde:
-- $n$  es el **número cuántico principal**, que puede tomar valores enteros $ n = 1, 2, 3, \dots $.
-- \( 13.6 \, \text{eV} \) es la energía del estado fundamental (cuando $n = 1$).
+- $n$  es el **número cuántico principal**, que puede tomar valores enteros $n = 1, 2, 3,...$.
+- $13.6 \, \text{eV}$ es la energía del estado fundamental (cuando $n = 1$).
 
 #### 3.1. Interpretación física
 
