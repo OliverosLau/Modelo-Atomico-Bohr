@@ -4,20 +4,34 @@
 # Es necesaria la instalación e importación de vpython, un módulo de gráficos 3D
 from vpython import *
 
-n_max = 10 # Número máximo de niveles
-# Se realiza la configuración de la escena: título, tamaño de la ventana
+"""Se define el número máximo de niveles para el modelo atómico de Bohr"""
+n_max = 10 
+"""A continuación se definen diferentes parámetros que permitirán obtener el modelo del gráfico en una ventada
+según las características especificadas"""
 scene.title = "Bohr model of the atom"
-scene.height = 500
-scene.width = 500
-scene.range = 2e-9
-scene.zoom = scene.spin = False
-background = color.white
-flash = color.black
-scene.background = background
+scene.height = 500 "Altura de la ventana"
+scene.width = 500 "Anchura de la ventana"
+scene.range = 2e-9 "Escala de visualización"
+scene.zoom = scene.spin = False "Desactivar zoom"
+background = color.white "Color de fondo de la escena"
+flash = color.black 
+scene.background = background "Color de fondo"
 
 # Se define la función que establece las órbitas, sus argumentos son: radio, grosor y color.
 def circle(radius, thickness, tint):
+    """
+    Establece las órbitas circulare que puede tener el electrón en el átomo de hidrógeno con una serie
+    de puntos
 
+    Args:
+    radius(float): Radio de la órbita circular.
+    thickness(float): Grosor de la línea que representa la órbita.
+    tint(vector): Color de la órbita, definido como un vector RGB de VPython.
+
+    Returns:
+    rtype: Objeto de curva que representa la órbita circular.
+    """
+    
     # Ángulo entre dos puntos consecutivos siendo 50 la cantidad de puntos total
     dtheta = 2*pi/50
 
@@ -35,14 +49,18 @@ def circle(radius, thickness, tint):
 # Creación del núcleo del átomo con su radio y color
 nucleus = sphere(radius=1e-11, color=color.red)
 
-# Variables físicas necesarias, constante de Planck, constante de Coulomb,
-# carga elemental y masa de electrón
+"""
+Se definen las variables clásicas necesarias para llevar a cabo la simulación como: la constante
+de Planck, constante de Coulomb, carga y masa del electrón.
+"""
 hbar = 1.05e-34
 oofpez = 9e9
 qe = 1.6e-19
 m = 9e-31
 
-# Se crean las órbitas relacionadas a sus radios (dependientes de cada número cuántico)
+"""
+Se crean las órbitas relacionadas a sus radios (dependientes de cada número cuántico)
+"""
 levels = []
 for n in range(1, n_max + 1):  # Usamos n_max para determinar el número de órbitas
     r = (n**2) * (hbar**2) / (oofpez * (qe**2) * m)
@@ -60,6 +78,9 @@ t = 0.0
 clicked = False
 
 def getclick():
+    """
+    Detecta un clic en la ventana de la simulación y cambia la variable global `clicked` a True.
+    """
     global clicked
     clicked = True
 
