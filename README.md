@@ -1,3 +1,4 @@
+
 # Modelo Atómico de Bohr
 
 ## Cálculo de los Niveles de Energía del Electrón en el Átomo de Hidrógeno
@@ -121,5 +122,4 @@ donde,
 - Visualización del electrón en varios niveles de energía.
 - Interacción mediante clics para cambiar entre niveles de energía.
 - Gráficos 3D implementados con VPython.
-
 
