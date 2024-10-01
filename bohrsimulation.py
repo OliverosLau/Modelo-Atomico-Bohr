@@ -1,7 +1,7 @@
 # Written by Ruth Chabay, licensed under Creative Commons 4.0.
 # Versión modificada por Laura Oliveros & Laura Triana.
 
-# Es necesaria la instalación e importación de vpython, un módulo de gráficos 3D, además de la importación del archivo de los cálculos
+# Es necesaria la instalación e importación de vpython, un módulo de gráficos 3D, además de la importación del archivo de los cálculos.
 from vpython import *
 from energia_niveles import *
 
