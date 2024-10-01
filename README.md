@@ -99,3 +99,27 @@ E_\text{fotón} = E_{n_2} - E_{n_1}
 $$
 
 Esto explica las **líneas espectrales** del hidrógeno observadas en experimentos, donde las frecuencias de la luz emitida o absorbida corresponden a las transiciones entre niveles de energía cuantizados.
+
+## Simulación de las trayectorias del electrón
+
+Para el modelo atómico de Bohr se busca simular el movimiento del electrón en las diferentes órbitas del átomo d hidrógeno, con radios 
+circuñares similar al sistema planetario de Copérnico, con la diferencia que estas órbitas tienen radios de valores particulares.En este modelo las únicas órbitas permitidas son aquellas que están **cuantizadas**:
+
+$$
+m_{e}\gamma r = \frac{n h}{2\pi}
+$$
+
+donde,
+- $m_{e}$ corresponde a la masa del electrón.
+- $n$ es el **número cuántico principal**, que puede tomar valores enteros.
+- $r$ es el radio de la órbita.
+- $h$ es la constante de Planck.
+
+  El radio de la primera órbita es n=1, $r=5.29·10^{-11} m$, se denomina **radio de Bohr**.
+
+### Características
+- Visualización del electrón en varios niveles de energía.
+- Interacción mediante clics para cambiar entre niveles de energía.
+- Gráficos 3D implementados con VPython.
+
+
