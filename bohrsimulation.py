@@ -13,14 +13,14 @@ print(niveles)
 
 """A continuación se definen diferentes parámetros que permitirán obtener el modelo del gráfico en una ventada
 según las características especificadas"""
-scene.title = "Bohr model of the atom"
-scene.height = 500 "Altura de la ventana"
-scene.width = 500 "Anchura de la ventana"
-scene.range = 2e-9 "Escala de visualización"
-scene.zoom = scene.spin = False "Desactivar zoom"
-background = color.white "Color de fondo de la escena"
+scene.title = #"Bohr model of the atom"
+scene.height = 500 #"Altura de la ventana"
+scene.width = 500 #"Anchura de la ventana"
+scene.range = 2e-9 #"Escala de visualización"
+scene.zoom = scene.spin = False #"Desactivar zoom"
+background = color.white #"Color de fondo de la escena"
 flash = color.black 
-scene.background = background "Color de fondo"
+scene.background = background #"Color de fondo"
 
 # Se define la función que establece las órbitas, sus argumentos son: radio, grosor y color.
 def circle(radius, thickness, tint):
